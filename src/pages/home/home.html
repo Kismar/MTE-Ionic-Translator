@@ -6,9 +6,9 @@
 
 <ion-content padding>
   <ion-item>
-    <ion-input type="text" placeholder="Text to translation..." ></ion-input>
+    <ion-input #input type="text" placeholder="Text to translation..." ></ion-input>
   </ion-item>
-  <button ion-button full>Translate</button>
+  <button ion-button full (click)="btnTranslate(input.value)">Translate</button>
   <ion-card>
 
     <ion-card-header>
