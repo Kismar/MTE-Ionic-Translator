@@ -13,6 +13,14 @@ export class HistoryProvider {
 
   private historyArray: Array<HistoryRecord> = [];
   constructor(private storage: Storage) {
+    //load data from persistent
+    this.storage.get('history').then(
+      (value) => {
+        if (value) {
+          this.historyArray = JSON.parse(value);
+        } 
+      }
+    )
   }
 
   public saveToStorage(from: string, to: string): void {
@@ -21,4 +29,7 @@ export class HistoryProvider {
     this.storage.set('history', JSON.stringify(this.historyArray));
   }
 
+  public getFromStorage() {
+    return this.historyArray;
+  }
 }

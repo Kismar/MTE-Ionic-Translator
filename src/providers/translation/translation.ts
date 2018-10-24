@@ -16,7 +16,7 @@ export class TranslationProvider {
   }
 
   public getTranslation(input: string):Observable<any> {
-    const url = 'https://api.mymemory.translated.net/get?q='+input+'&langpair=en|cs';
+    const url = 'https://api.mymemory.translated.net/get?q='+input+'&langpair=cs|en';
     return this.http.get<any>(url);
   }
 }
