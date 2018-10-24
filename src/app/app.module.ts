@@ -14,7 +14,7 @@ import { TranslationProvider } from '../providers/translation/translation';
 
 import { HttpClientModule }    from '@angular/common/http';
 import { HistoryPage } from '../pages/history/history';
-
+import { IonicStorageModule } from '@ionic/storage';
 @NgModule({
   declarations: [
     MyApp,
@@ -27,7 +27,8 @@ import { HistoryPage } from '../pages/history/history';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
+    IonicStorageModule.forRoot(),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
