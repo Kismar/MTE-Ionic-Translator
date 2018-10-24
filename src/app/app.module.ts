@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { TranslationProvider } from '../providers/translation/translation';
 
 import { HttpClientModule }    from '@angular/common/http';
+import { HistoryPage } from '../pages/history/history';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule }    from '@angular/common/http';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    HistoryPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { HttpClientModule }    from '@angular/common/http';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    HistoryPage
   ],
   providers: [
     StatusBar,
