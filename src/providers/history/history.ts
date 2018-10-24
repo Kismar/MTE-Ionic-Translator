@@ -11,7 +11,7 @@ import { HistoryRecord } from '../../models/historyRecord';
 @Injectable()
 export class HistoryProvider {
 
-  private historyArray: Array<HistoryRecord>;
+  private historyArray: Array<HistoryRecord> = [];
   constructor(private storage: Storage) {
   }
 
